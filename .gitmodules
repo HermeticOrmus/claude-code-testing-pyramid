@@ -1,0 +1,3 @@
+[submodule "tools/meta-prompting-framework"]
+	path = tools/meta-prompting-framework
+	url = https://github.com/manutej/meta-prompting-framework.git

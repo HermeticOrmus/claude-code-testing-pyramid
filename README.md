@@ -20,6 +20,7 @@ Comprehensive testing guide covering unit, integration, E2E, visual regression, 
 ✅ **Load Testing**: k6, Artillery, JMeter production examples
 ✅ **Contract Testing**: Pact consumer-driven contracts
 ✅ **Mutation Testing**: Stryker for code quality assurance
+✅ **Meta-Prompting**: AI-powered test generation and improvement ([docs](docs/guides/meta-prompting-integration.md))
 
 ## 🎯 Why This Guide?
 
@@ -63,9 +64,12 @@ A **complete testing guide** that:
 ### Installation
 
 ```bash
-# Clone the repository
-git clone https://github.com/yourusername/claude-code-testing-pyramid.git
+# Clone the repository with submodules
+git clone --recurse-submodules https://github.com/yourusername/claude-code-testing-pyramid.git
 cd claude-code-testing-pyramid
+
+# If already cloned without submodules:
+git submodule update --init --recursive
 
 # Install JavaScript dependencies
 npm install
@@ -75,6 +79,9 @@ pip install -e ".[dev]"
 
 # Install Playwright browsers
 npx playwright install --with-deps
+
+# (Optional) Install meta-prompting framework dependencies
+pip install -e ".[meta-prompting]"
 ```
 
 ### Run Your First Tests
